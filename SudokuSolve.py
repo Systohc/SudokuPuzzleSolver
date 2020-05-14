@@ -1,7 +1,7 @@
 # Sudoku Solver -- Solves a unsolved_sudoku puzzle with recursion and back
 # tracking.
 
-# Author (Pieced together from the internet by): Raleigh Martin
+# Author (Pieced together from the internet by): Raleigh
 # Date: 5-11-20
 
 import numpy as np
@@ -30,27 +30,11 @@ appearance_pattern = [['*', '*', '*', 'x', '*', 'x', '*', '*', '*'],
                       #             ||             ||            ||
                       ['*', '*', '*', 'x', '*', 'x', '*', '*', '*']]
 
-
 ############################################################
-unsolved_sudoku = [[5, 3, 0, 0, 7, 0, 0, 0, 0],
-                   [6, 0, 0, 1, 9, 5, 0, 0, 0],
-                   [0, 9, 8, 0, 0, 0, 0, 6, 0],
-                   [8, 0, 0, 0, 6, 0, 0, 0, 3],
-                   [4, 0, 0, 8, 0, 3, 0, 0, 1],
-                   [7, 0, 0, 0, 2, 0, 0, 0, 6],
-                   [0, 6, 0, 0, 0, 0, 2, 8, 0],
-                   [0, 0, 0, 4, 1, 9, 0, 0, 5],
-                   [0, 0, 0, 0, 8, 0, 0, 7, 9]]
 
-very_basic_sudoku = [[0, 0, 0, 0, 0, 0, 0, 0, 7],
-                     [7, 2, 0, 3, 0, 9, 0, 0, 1],
-                     [0, 0, 8, 7, 0, 5, 0, 6, 0],
-                     [5, 0, 2, 8, 9, 0, 0, 0, 0],
-                     [0, 4, 0, 5, 0, 1, 0, 9, 0],
-                     [0, 0, 0, 0, 6, 3, 7, 0, 5],
-                     [0, 3, 0, 9, 0, 6, 1, 0, 0],
-                     [2, 0, 0, 1, 0, 7, 0, 5, 3],
-                     [9, 0, 0, 0, 0, 0, 0, 0, 0]]
+# Add 5 numbers randomly to the empty sudoku, and then create a pattern of X's in
+# the appearance pattern to generate a puzzle. (Don't forget to set Generate Puzzle to
+# true at the top.)
 
 empty_sudoku = [[0, 0, 0, 0, 0, 0, 0, 0, 0],
                 [0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -62,17 +46,17 @@ empty_sudoku = [[0, 0, 0, 0, 0, 0, 0, 0, 0],
                 [0, 0, 0, 0, 0, 0, 0, 0, 0],
                 [0, 0, 0, 0, 0, 0, 0, 0, 0]]
 
-dads_sudoku = [[0, 0, 0, 0, 6, 0, 0, 0, 0],
-               [0, 0, 6, 2, 0, 4, 9, 0, 0],
-               [0, 7, 0, 0, 0, 0, 0, 4, 0],
-               [0, 3, 0, 9, 0, 1, 0, 8, 0],
-               [2, 0, 0, 0, 3, 0, 0, 0, 4],
-               [0, 9, 0, 6, 0, 2, 0, 5, 0],
-               [0, 8, 0, 0, 0, 0, 0, 7, 0],
-               [0, 0, 9, 8, 0, 3, 1, 0, 0],
-               [0, 0, 0, 0, 2, 0, 0, 0, 0]]
+unsolved_sudoku = [[0, 0, 0, 0, 6, 0, 0, 0, 0],
+                   [0, 0, 6, 2, 0, 4, 9, 0, 0],
+                   [0, 7, 0, 0, 0, 0, 0, 4, 0],
+                   [0, 3, 0, 9, 0, 1, 0, 8, 0],
+                   [2, 0, 0, 0, 3, 0, 0, 0, 4],
+                   [0, 9, 0, 6, 0, 2, 0, 5, 0],
+                   [0, 8, 0, 0, 0, 0, 0, 7, 0],
+                   [0, 0, 9, 8, 0, 3, 1, 0, 0],
+                   [0, 0, 0, 0, 2, 0, 0, 0, 0]]
 
-puzzle_to_solve = very_basic_sudoku
+puzzle_to_solve = unsolved_sudoku
 
 steps_to_solve = 0
 
